@@ -6,7 +6,7 @@ from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
-ocr = PaddleOCR(use_angle_cls=True, lang='en')  # поддерживает русский, английский, китайский и др.
+ocr = PaddleOCR(use_textline_orientation=True, lang='en')  # поддерживает русский, английский, китайский и др.
 
 def extract_font_properties(img, bbox):
     """Анализ bounding box для определения свойств шрифта"""
