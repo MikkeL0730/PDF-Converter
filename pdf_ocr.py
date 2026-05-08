@@ -52,7 +52,7 @@ def pdf_scanned_to_docx(pdf_path, output_path, lang='ru,en'):
         img_cv = cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
         
         # OCR распознавание
-        result = ocr.ocr(img_cv, cls=True)
+        result = ocr.ocr(img_cv)
         
         # Группировка строк по Y координате
         lines = {}
