@@ -6,7 +6,7 @@ from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
-ocr = PaddleOCR(use_angle_cls=True, lang='en', show_log=False)  # поддерживает русский, английский, китайский и др.
+ocr = PaddleOCR(use_angle_cls=True, lang='en')  # поддерживает русский, английский, китайский и др.
 
 def extract_font_properties(img, bbox):
     """Анализ bounding box для определения свойств шрифта"""
@@ -95,4 +95,4 @@ def pdf_scanned_to_docx(pdf_path, output_path, lang='ru,en'):
     doc.save(output_path)
 
 # Использование
-pdf_scanned_to_docx("scanned.pdf", "output.docx", lang='ru,en')
+pdf_scanned_to_docx(r"C:\Users\vanak\Downloads\pdf_to_scan_69fdba2633707_temp_69fdba25c59d2.pdf", "output.docx", lang='ru,en')
