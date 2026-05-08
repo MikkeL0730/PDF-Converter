@@ -45,7 +45,7 @@ def pdf_scanned_to_docx(pdf_path, output_path, lang='ru,en'):
     """Главная функция"""
     from pdf2image import convert_from_path
     
-    images = convert_from_path(pdf_path, dpi=300)
+    images = convert_from_path(pdf_path, dpi=300, poppler_path=r'C:\Users\vanak\Downloads\Python_OCR-master\Python_OCR-master\poppler-0.68.0_x86\poppler-0.68.0\bin')
     doc = Document()
     
     for page_num, img_pil in enumerate(images):
